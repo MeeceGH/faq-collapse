@@ -34,7 +34,7 @@ h3 {
     padding: 30px;
     position: relative;
     overflow: hidden;
-    transition: 0.3s ease;
+    transition: 3s ease;
 }
 
 .qa-box.active {
