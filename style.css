@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli', sans-serif;
+    background-color: #f0f0f0;
+}
+
+h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+    margin: 50px 0 30px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.qa-box {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.qa-box.active {
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.qa-box.active::before,
+.qa-box.active::after {
+    content: '\f075';
+    font-family: 'Font Awesome 5 Free';
+    color: #2ecc71;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+}
+
+.qa-box.active::before {
+    color: #3498db;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
+}
+
+.qa-title {
+    margin: 0 35px 0 0;
+}
+
+.qa-text {
+    margin: 30px 0 0;
+    display: none;
+    font-size: 0.9rem;
+}
+
+.qa-box.active .qa-text {
+    display: block;
+}
+
+.btn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    padding: 0;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.qa-box .fa-times {
+    display: none;
+}
+
+.qa-box.active .fa-times {
+    display: block;
+    color: white;
+}
+
+.qa-box.active .fa-chevron-down {
+    display: none;
+}
+
+.qa-box.active .btn {
+    background-color: #9fa4a8;
+}
